@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ws_imageView_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/ic_group_49"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ws_imageView_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_group_17"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ws_imageView_top" />
+
+    <ImageView
+        android:id="@+id/ws_imageView_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        app:srcCompat="@drawable/ic_welcome_screen_activity"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ws_imageView_icon" />
+
+    <TextView
+        android:id="@+id/ws_textView_tracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/ws_textView_text_tracker"
+        android:textAlignment="center"
+        android:textColor="#1f1f1f"
+        android:textSize="32sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ws_textView_students"
+        app:layout_constraintTop_toBottomOf="@id/ws_imageView_activity"
+        tools:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/ws_textView_students"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/ws_textView_text_students"
+        android:textAlignment="center"
+        android:textColor="#767676"
+        android:textSize="16sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ws_button_register"
+        app:layout_constraintTop_toBottomOf="@id/ws_textView_tracker"
+        tools:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ws_button_register"
+        style="@style/materialButton_blueButton"
+        android:text="@string/ws_materialButton_text_registration"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ws_button_login"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ws_button_login"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/ws_materialButton_text_login"
+        android:textAllCaps="false"
+        android:textColor="#4800ff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:rippleColor="@android:color/transparent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
