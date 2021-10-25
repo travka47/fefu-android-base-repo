@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/main_item_activity"
+        android:id="@+id/activityFragment"
         android:icon="@drawable/ic_sports"
         android:title="@string/main_navigation_item_title_activity" />
     <item
-        android:id="@+id/main_item_profile"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/ic_person"
         android:title="@string/main_navigation_item_title_profile" />
 
