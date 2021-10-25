@@ -12,15 +12,15 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.registration_screen.*
+import kotlinx.android.synthetic.main.activity_registration_screen.*
 import ru.fefu.activitytracker.R
-import ru.fefu.activitytracker.databinding.RegistrationScreenBinding
+import ru.fefu.activitytracker.databinding.ActivityRegistrationScreenBinding
 
 class RegistrationScreenActivity: AppCompatActivity() {
-    lateinit var binding: RegistrationScreenBinding
+    lateinit var binding: ActivityRegistrationScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = RegistrationScreenBinding.inflate(layoutInflater)
+        binding = ActivityRegistrationScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.regImageButtonArrow.setOnClickListener {
