@@ -3,17 +3,17 @@ package ru.fefu.fitnes_tracker
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import ru.fefu.activitytracker.databinding.LoginBinding
+import ru.fefu.activitytracker.databinding.LoginScreenBinding
 
-class loginActivity: AppCompatActivity() {
-    lateinit var binding: LoginBinding
+class LoginScreenActivity: AppCompatActivity() {
+    lateinit var binding: LoginScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = LoginBinding.inflate(layoutInflater)
+        binding = LoginScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.logImageButtonArrow.setOnClickListener {
-            val intent = Intent(this, welcomeScreenActivity::class.java)
+            val intent = Intent(this, WelcomeScreenActivity::class.java)
             startActivity(intent)
         }
     }
