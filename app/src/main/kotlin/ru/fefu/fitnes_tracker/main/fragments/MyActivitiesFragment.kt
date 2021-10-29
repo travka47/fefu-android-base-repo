@@ -1,23 +1,28 @@
 package ru.fefu.fitnes_tracker.main.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import ru.fefu.activitytracker.R
+import ru.fefu.activitytracker.databinding.FragmentMyActivitiesBinding
+import ru.fefu.fitnes_tracker.main.ui.ActivitiesRecyclerViewAdapter
+import ru.fefu.fitnes_tracker.main.ui.ActivitiesRecyclerViewItemsRepository
 
-class MyActivitiesFragment : Fragment() {
+class MyActivitiesFragment :
+    BaseFragment<FragmentMyActivitiesBinding>(R.layout.fragment_my_activities) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private val activitiesRecyclerViewItemsRepository = ActivitiesRecyclerViewItemsRepository()
+    private val activitiesRecyclerViewAdapter = ActivitiesRecyclerViewAdapter(activitiesRecyclerViewItemsRepository.getItems())
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_my_activities, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        with(binding.frMyRecyclerView) {
+            adapter = activitiesRecyclerViewAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+        }
+
+        activitiesRecyclerViewAdapter.setItemClickListener { activitiesRecyclerViewAdapter.removeItem(it) }
+//        binding.btnAdd.setOnClickListener { exampleAdapter.addCat(catsRepository.getRandomCat()) }
     }
 }

@@ -11,8 +11,8 @@ import ru.fefu.fitnes_tracker.main.ui.ActivitiesRecyclerViewItemsRepository
 class UsersActivitiesFragment :
     BaseFragment<FragmentUsersActivitiesBinding>(R.layout.fragment_users_activities) {
 
-    private val catsRepository = ActivitiesRecyclerViewItemsRepository()
-    private val activitiesRecyclerViewAdapter = ActivitiesRecyclerViewAdapter(catsRepository.getItems())
+    private val activitiesRecyclerViewItemsRepository = ActivitiesRecyclerViewItemsRepository()
+    private val activitiesRecyclerViewAdapter = ActivitiesRecyclerViewAdapter(activitiesRecyclerViewItemsRepository.getItems())
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,5 +25,4 @@ class UsersActivitiesFragment :
         activitiesRecyclerViewAdapter.setItemClickListener { activitiesRecyclerViewAdapter.removeItem(it) }
 //        binding.btnAdd.setOnClickListener { exampleAdapter.addCat(catsRepository.getRandomCat()) }
     }
-
 }
