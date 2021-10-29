@@ -16,7 +16,6 @@ class ActivitiesRecyclerViewAdapter : RecyclerView.Adapter<ActivitiesRecyclerVie
         notifyDataSetChanged()
     }
 
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int

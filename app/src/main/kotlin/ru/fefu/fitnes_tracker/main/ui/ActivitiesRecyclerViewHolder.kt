@@ -10,6 +10,7 @@ sealed class ActivitiesRecyclerViewHolder(binding: ViewBinding) : RecyclerView.V
     class ActivityViewHolder(private val binding: ItemActivityBinding) : ActivitiesRecyclerViewHolder(binding) {
         fun bind(activity: ActivitiesRecyclerViewItem.Activity) {
             binding.activityItemTextViewActivity.text = activity.activity
+            binding.activityItemTextViewDistance.text = activity.distance
             binding.activityItemTextViewTime.text = activity.time
             binding.activityItemTextViewDate.text = activity.date
         }
