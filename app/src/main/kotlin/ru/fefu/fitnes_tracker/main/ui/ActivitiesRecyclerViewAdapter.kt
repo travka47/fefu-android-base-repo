@@ -4,16 +4,21 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.fefu.activitytracker.R
-import ru.fefu.activitytracker.databinding.ItemActivityBinding
 import ru.fefu.activitytracker.databinding.ItemDateBinding
+import ru.fefu.activitytracker.databinding.ItemMyActivityBinding
+import ru.fefu.activitytracker.databinding.ItemUserActivityBinding
 import java.lang.IllegalArgumentException
 
-class ActivitiesRecyclerViewAdapter : RecyclerView.Adapter<ActivitiesRecyclerViewHolder>() {
+class ActivitiesRecyclerViewAdapter (
+        items: List<ActivitiesRecyclerViewItem>
+    ) : RecyclerView.Adapter<ActivitiesRecyclerViewHolder>() {
 
-    var items = listOf<ActivitiesRecyclerViewItem>()
-    set(value) {
-        field = value
-        notifyDataSetChanged()
+    private val items = items.toMutableList()
+
+    private var itemClickListener: (Int) -> Unit = {}
+
+    fun setItemClickListener(listener: (Int) -> Unit) {
+        itemClickListener = listener
     }
 
     override fun onCreateViewHolder(
@@ -21,8 +26,15 @@ class ActivitiesRecyclerViewAdapter : RecyclerView.Adapter<ActivitiesRecyclerVie
         viewType: Int
     ): ActivitiesRecyclerViewHolder {
         return when(viewType) {
-            R.layout.item_activity -> ActivitiesRecyclerViewHolder.ActivityViewHolder(
-                ItemActivityBinding.inflate(
+            R.layout.item_my_activity -> ActivitiesRecyclerViewHolder.MyActivityViewHolder(
+                ItemMyActivityBinding.inflate(
+                    LayoutInflater.from(parent.context),
+                    parent,
+                    false
+                )
+            )
+            R.layout.item_user_activity -> ActivitiesRecyclerViewHolder.UserActivityViewHolder(
+                ItemUserActivityBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
@@ -41,7 +53,8 @@ class ActivitiesRecyclerViewAdapter : RecyclerView.Adapter<ActivitiesRecyclerVie
 
     override fun onBindViewHolder(holder: ActivitiesRecyclerViewHolder, position: Int) {
         when(holder) {
-            is ActivitiesRecyclerViewHolder.ActivityViewHolder -> holder.bind(items[position] as ActivitiesRecyclerViewItem.Activity)
+            is ActivitiesRecyclerViewHolder.MyActivityViewHolder -> holder.bind(items[position] as ActivitiesRecyclerViewItem.MyActivity)
+            is ActivitiesRecyclerViewHolder.UserActivityViewHolder -> holder.bind(items[position] as ActivitiesRecyclerViewItem.UserActivity)
             is ActivitiesRecyclerViewHolder.DateViewHolder -> holder.bind(items[position] as ActivitiesRecyclerViewItem.Date)
         }
     }
@@ -50,8 +63,22 @@ class ActivitiesRecyclerViewAdapter : RecyclerView.Adapter<ActivitiesRecyclerVie
 
     override fun getItemViewType(position: Int): Int {
         return when(items[position]) {
-            is ActivitiesRecyclerViewItem.Activity -> R.layout.item_activity
+            is ActivitiesRecyclerViewItem.MyActivity -> R.layout.item_my_activity
+            is ActivitiesRecyclerViewItem.UserActivity -> R.layout.item_user_activity
             is ActivitiesRecyclerViewItem.Date -> R.layout.item_date
         }
     }
+
+    fun addItem(item: ActivitiesRecyclerViewItem) {
+        items.add(item)
+        notifyItemInserted(items.size - 1)
+    }
+
+    fun removeItem(position: Int) {
+        if (position in items.indices) {
+            items.removeAt(position)
+            notifyItemRemoved(position)
+        }
+    }
+
 }

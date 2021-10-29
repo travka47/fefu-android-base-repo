@@ -1,37 +1,29 @@
 package ru.fefu.fitnes_tracker.main.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import ru.fefu.activitytracker.R
+import ru.fefu.activitytracker.databinding.FragmentUsersActivitiesBinding
 import ru.fefu.fitnes_tracker.main.ui.ActivitiesRecyclerViewAdapter
-import ru.fefu.fitnes_tracker.main.ui.ActivitiesViewModel
+import ru.fefu.fitnes_tracker.main.ui.ActivitiesRecyclerViewItemsRepository
 
-class UsersActivitiesFragment : Fragment() {
+class UsersActivitiesFragment :
+    BaseFragment<FragmentUsersActivitiesBinding>(R.layout.fragment_users_activities) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private val catsRepository = ActivitiesRecyclerViewItemsRepository()
+    private val activitiesRecyclerViewAdapter = ActivitiesRecyclerViewAdapter(catsRepository.getItems())
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val myFragment = inflater.inflate(R.layout.fragment_users_activities, container, false)
-        val recyclerView = myFragment.findViewById<RecyclerView>(R.id.fr_us_recyclerView)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        recyclerView.apply() {
-            recyclerView.setHasFixedSize(true)
-            recyclerView.layoutManager = LinearLayoutManager(myFragment.context)
-            recyclerView.adapter = ActivitiesRecyclerViewAdapter()
+        with(binding.frUsRecyclerView) {
+            adapter = activitiesRecyclerViewAdapter
+            layoutManager = LinearLayoutManager(requireContext())
         }
 
-        return myFragment
+        activitiesRecyclerViewAdapter.setItemClickListener { activitiesRecyclerViewAdapter.removeItem(it) }
+//        binding.btnAdd.setOnClickListener { exampleAdapter.addCat(catsRepository.getRandomCat()) }
     }
+
 }
