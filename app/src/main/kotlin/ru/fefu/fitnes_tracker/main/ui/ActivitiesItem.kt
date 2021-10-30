@@ -1,6 +1,6 @@
 package ru.fefu.fitnes_tracker.main.ui
 
-sealed class ActivitiesRecyclerViewItem {
+sealed class ActivitiesItem {
 
     class MyActivity (
         val activity: String,
@@ -9,7 +9,7 @@ sealed class ActivitiesRecyclerViewItem {
         val date: String,
 //        val start: String,
 //        val finish: String
-    ) : ActivitiesRecyclerViewItem()
+    ) : ActivitiesItem()
 
     class UserActivity (
         val activity: String,
@@ -19,11 +19,5 @@ sealed class ActivitiesRecyclerViewItem {
         val user: String,
 //        val start: String,
 //        val finish: String
-    ) : ActivitiesRecyclerViewItem()
-
-    class Date (
-        val date: String,
-        val myActivities: Array<MyActivity>,
-        val userActivities: Array<UserActivity>
-    ) : ActivitiesRecyclerViewItem()
+    ) : ActivitiesItem()
 }
