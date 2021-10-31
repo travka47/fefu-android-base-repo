@@ -28,38 +28,28 @@
 
         <TextView
             android:id="@+id/my_activity_item_textView_distance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/textView_blackHeader"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="Расстояние"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
 
             app:layout_constraintStart_toStartOf="@id/my_activity_item_view"
             app:layout_constraintTop_toTopOf="@id/my_activity_item_view" />
 
         <TextView
             android:id="@+id/my_activity_item_textView_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/textView_blackText"
             android:layout_marginTop="4dp"
             android:text="Время"
-            android:textColor="#101010"
-            android:textSize="16sp"
 
             app:layout_constraintStart_toStartOf="@id/my_activity_item_textView_distance"
             app:layout_constraintTop_toBottomOf="@id/my_activity_item_textView_distance" />
 
         <TextView
             android:id="@+id/my_activity_item_textView_activity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/textView_blackText"
             android:layout_marginTop="16dp"
             android:text="Активность"
-            android:textColor="#101010"
-            android:textSize="16sp"
 
             app:layout_constraintEnd_toStartOf="@id/my_activity_item_textView_date"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -68,13 +58,10 @@
 
         <TextView
             android:id="@+id/my_activity_item_textView_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/textView_greyText"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="Дата"
-            android:textColor="#808080"
-            android:textSize="16sp"
 
             app:layout_constraintEnd_toEndOf="@id/my_activity_item_view"
             app:layout_constraintStart_toEndOf="@id/my_activity_item_textView_activity"
