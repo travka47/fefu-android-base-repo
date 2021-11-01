@@ -9,6 +9,9 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
     android:layout_marginTop="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="5dp">
 

@@ -15,10 +15,6 @@ class ActivitiesItemAdapter (
 
     private var itemClickListener: (Int) -> Unit = {}
 
-    fun setItemClickListener(listener: (Int) -> Unit) {
-        itemClickListener = listener
-    }
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -29,14 +25,14 @@ class ActivitiesItemAdapter (
                     LayoutInflater.from(parent.context),
                     parent,
                     false
-                )
+                ), itemClickListener
             )
             R.layout.item_user_activity -> ActivitiesItemViewHolder.UserActivityViewHolder(
                 ItemUserActivityBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
-                )
+                ), itemClickListener
             )
             else -> throw IllegalArgumentException("Invalid viewType")
         }
