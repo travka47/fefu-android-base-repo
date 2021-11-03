@@ -22,7 +22,6 @@ class UsersActivitiesFragment :
             layoutManager = LinearLayoutManager(requireContext())
         }
 
-//        activitiesRecyclerViewAdapter.setItemClickListener { activitiesRecyclerViewAdapter.removeItem(it) }
-//        binding.btnAdd.setOnClickListener { exampleAdapter.addCat(catsRepository.getRandomCat()) }
+        userActivitiesAdapter.setUserActivitiesClickListener { userActivitiesAdapter.removeUserActivity(it) }
     }
 }

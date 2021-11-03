@@ -14,6 +14,12 @@ class UserActivitiesDateAdapter (
 
     private val items = items.toMutableList()
 
+    private var userActivitiesClickListener: (Int) -> Unit = {}
+
+    fun setUserActivitiesClickListener(listener: (Int) -> Unit) {
+        userActivitiesClickListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : UserActivitiesDateAdapter.ActivitiesDateViewHolder {
         val binding = ItemDateBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ActivitiesDateViewHolder(binding)
@@ -33,16 +39,11 @@ class UserActivitiesDateAdapter (
 
     override fun getItemCount() = items.size
 
-//    fun addItem(item: ActivitiesDate) {
-//        items.add(item)
-//        notifyItemInserted(items.size - 1)
-//    }
-//
-//    fun removeItem(position: Int) {
-//        if (position in items.indices) {
-//            items.removeAt(position)
-//            notifyItemRemoved(position)
-//        }
-//    }
+    fun removeUserActivity(position: Int) {
+        if (position in items.indices) {
+            items.removeAt(position)
+            notifyItemRemoved(position)
+        }
+    }
 
 }

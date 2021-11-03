@@ -12,17 +12,16 @@ class MyActivitiesFragment :
     BaseFragment<FragmentMyActivitiesBinding>(R.layout.fragment_my_activities) {
 
     private val repository = ActivitiesDateRepository()
-    private val activitiesAdapter = MyActivitiesDateAdapter(repository.getItems())
+    private val myActivitiesAdapter = MyActivitiesDateAdapter(repository.getItems())
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         with(binding.frMyRecyclerView) {
-            adapter = activitiesAdapter
+            adapter = myActivitiesAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
 
-//        activitiesRecyclerViewAdapter.setItemClickListener { activitiesRecyclerViewAdapter.removeItem(it) }
-//        binding.btnAdd.setOnClickListener { exampleAdapter.addCat(catsRepository.getRandomCat()) }
+        myActivitiesAdapter.setMyActivitiesClickListener { myActivitiesAdapter.removeMyActivity(it) }
     }
 }

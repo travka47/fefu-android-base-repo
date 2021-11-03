@@ -5,8 +5,8 @@ import androidx.viewbinding.ViewBinding
 import ru.fefu.activitytracker.databinding.ItemMyActivityBinding
 import ru.fefu.activitytracker.databinding.ItemUserActivityBinding
 
-sealed class ActivitiesItemViewHolder(binding: ViewBinding) : RecyclerView.ViewHolder(binding.root) {
-    class MyActivityViewHolder(private val binding: ItemMyActivityBinding, listener: (Int) -> Unit) : ActivitiesItemViewHolder(binding) {
+sealed class ActivitiesItemViewHolder(binding: ViewBinding, listener: (Int) -> Unit) : RecyclerView.ViewHolder(binding.root) {
+    class MyActivityViewHolder(private val binding: ItemMyActivityBinding, listener: (Int) -> Unit) : ActivitiesItemViewHolder(binding, listener) {
         init {
             binding.myActivityItemCardView.setOnClickListener {
                 val position = adapterPosition
@@ -21,7 +21,7 @@ sealed class ActivitiesItemViewHolder(binding: ViewBinding) : RecyclerView.ViewH
         }
     }
 
-    class UserActivityViewHolder(private val binding: ItemUserActivityBinding, listener: (Int) -> Unit) : ActivitiesItemViewHolder(binding) {
+    class UserActivityViewHolder(private val binding: ItemUserActivityBinding, listener: (Int) -> Unit) : ActivitiesItemViewHolder(binding, listener) {
         init {
             binding.userActivityItemCardView.setOnClickListener {
                 val position = adapterPosition

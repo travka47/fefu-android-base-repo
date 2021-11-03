@@ -50,10 +50,5 @@ class ActivitiesDateRepository {
         )
     )
 
-//    private var lastId = defaultItems.maxOf { it.id }
-
     fun getItems(): List<ActivitiesDate> = defaultItems
-
-//    fun getRandomCat(): ActivitiesItem = defaultItems.random().copy(id = ++lastId)
-
 }

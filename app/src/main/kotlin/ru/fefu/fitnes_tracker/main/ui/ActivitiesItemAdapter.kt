@@ -53,17 +53,4 @@ class ActivitiesItemAdapter (
             is ActivitiesItem.UserActivity -> R.layout.item_user_activity
         }
     }
-
-//    fun addItem(item: ActivitiesItem) {
-//        items.add(item)
-//        notifyItemInserted(items.size - 1)
-//    }
-//
-//    fun removeItem(position: Int) {
-//        if (position in items.indices) {
-//            items.removeAt(position)
-//            notifyItemRemoved(position)
-//        }
-//    }
-
 }
