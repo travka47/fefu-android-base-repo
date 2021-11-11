@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -13,7 +11,8 @@ import ru.fefu.activitytracker.R
 import ru.fefu.activitytracker.databinding.FragmentActivityBinding
 import ru.fefu.fitnes_tracker.main.ViewPagerAdapter
 
-class ActivityFragment : BaseFragment<FragmentActivityBinding>(R.layout.fragment_activity) {
+class ActivityFragment :
+    BaseFragment<FragmentActivityBinding>(R.layout.fragment_activity) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
