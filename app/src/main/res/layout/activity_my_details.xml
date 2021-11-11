@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -33,18 +34,18 @@
                 android:id="@+id/my_details_distance"
                 style="@style/textView_blackHeader"
                 android:layout_marginTop="24dp"
-                tools:text="14.32 км" />
+                android:text="14.32 км" />
 
             <TextView
                 android:id="@+id/my_details_end"
                 style="@style/textView_greyText"
-                tools:text="14 часов назад" />
+                android:text="14 часов назад" />
 
             <TextView
                 android:id="@+id/my_details_time"
                 style="@style/textView_blackHeader"
                 android:layout_marginTop="24dp"
-                tools:text="1 ч 42 мин" />
+                android:text="1 ч 42 мин" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -61,7 +62,7 @@
                     android:id="@+id/my_details_start_time"
                     style="@style/textView_greyText"
                     android:layout_marginStart="8dp"
-                    tools:text="14:49" />
+                    android:text="14:49" />
 
                 <View
                     android:layout_width="1dp"
@@ -79,7 +80,7 @@
                     android:id="@+id/my_details_end_time"
                     style="@style/textView_greyText"
                     android:layout_marginStart="8dp"
-                    tools:text="16:31" />
+                    android:text="16:31" />
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
