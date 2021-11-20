@@ -30,4 +30,12 @@
     <string name="details_text_start_label">Старт</string>
     <string name="details_text_end_label">Финиш</string>
     <string name="details_hint_comment">Комментарий</string>
+    <string name="fr_prof_textInputLayout_hint_name">Имя или никнейм</string>
+    <string name="fr_prof_button_text_save">Сохранить</string>
+    <string name="fr_prof_button_text_change">Изменить пароль</string>
+    <string name="fr_prof_button_text_exit">Выйти</string>
+    <string name="fr_pas_hint_oldPassword">Старый пароль</string>
+    <string name="fr_pas_hint_newPassword">Новый пароль</string>
+    <string name="fr_pas_hint_newPassword2">Повторите пароль</string>
+    <string name="fr_pas_button_text_accept">Принять</string>
 </resources>

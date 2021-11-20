@@ -32,7 +32,7 @@
 
             <TextView
                 android:id="@+id/my_details_distance"
-                style="@style/textView_blackHeader"
+                style="@style/textView_blackHeader24"
                 android:layout_marginTop="24dp"
                 android:text="14.32 км" />
 
@@ -43,7 +43,7 @@
 
             <TextView
                 android:id="@+id/my_details_time"
-                style="@style/textView_blackHeader"
+                style="@style/textView_blackHeader24"
                 android:layout_marginTop="24dp"
                 android:text="1 ч 42 мин" />
 

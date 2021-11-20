@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/my_activity_item_textView_distance"
-            style="@style/textView_blackHeader"
+            style="@style/textView_blackHeader24"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="Расстояние"

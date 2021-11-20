@@ -23,4 +23,20 @@
         app:layout_constraintTop_toBottomOf="@id/fr_act_tabLayout"
         app:layout_constraintBottom_toBottomOf="parent" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fr_act_floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="64dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
+        android:translationZ="4dp"
+        android:src="@drawable/ic_play"
+        app:maxImageSize="12dp"
+        app:tint="@android:color/white"
+        android:backgroundTint="#4b09f3"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

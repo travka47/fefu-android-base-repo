@@ -2,18 +2,106 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
 
     <TextView
+        android:id="@+id/fr_prof_textView_profile"
+        style="@style/textView_blackHeader20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginStart="20dp"
         android:text="@string/fr_prof_textView_text_profile"
+
+        app:layout_constraintBottom_toTopOf="@id/fr_prof_textInputLayout_login"
+        app:layout_constraintEnd_toStartOf="@id/fr_prof_button_save"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fr_prof_button_save"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/fr_prof_button_text_save"
+        android:textAllCaps="false"
+        android:textColor="#4b09f3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/fr_prof_textInputLayout_login"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@id/fr_prof_textView_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.21"
+        app:rippleColor="@android:color/transparent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fr_prof_textInputLayout_login"
+        style="@style/textInputLayout_inputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/fr_prof_textView_profile"
+        app:layout_constraintBottom_toTopOf="@id/fr_prof_textInputLayout_name">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/reg_textInputLayout_hint_login" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fr_prof_textInputLayout_name"
+        style="@style/textInputLayout_inputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintTop_toBottomOf="@id/fr_prof_textInputLayout_login">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/fr_prof_textInputLayout_hint_name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fr_prof_button_change"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/fr_prof_button_text_change"
+        android:textAllCaps="false"
+        android:textColor="#4b09f3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:rippleColor="@android:color/transparent"
+        tools:ignore="TouchTargetSizeCheck"
+
+        app:layout_constraintStart_toStartOf="@id/fr_prof_textInputLayout_name"
+        app:layout_constraintTop_toBottomOf="@id/fr_prof_textInputLayout_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fr_prof_button_exit"
+        style="@style/materialButton_squareButton"
+        android:text="@string/fr_prof_button_text_exit"
+        android:backgroundTint="#b00020"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/fr_prof_button_change"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

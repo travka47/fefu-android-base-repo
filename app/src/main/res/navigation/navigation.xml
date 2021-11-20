@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/activityFragment">
 
@@ -21,8 +20,17 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="ru.fefu.fitnes_tracker.main.fragments.ProfileFragment"
-        android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile" />
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_profileFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment">
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="ru.fefu.fitnes_tracker.main.fragments.PasswordFragment"
+        android:label="passwordFragment">
+    </fragment>
     <fragment
         android:id="@+id/myActivityDetailsFragment"
         android:name="ru.fefu.fitnes_tracker.main.fragments.MyActivityDetailsFragment"
@@ -31,5 +39,5 @@
     <fragment
         android:id="@+id/userActivityDetailsFragment"
         android:name="ru.fefu.fitnes_tracker.main.fragments.UserActivityDetailsFragment"
-        android:label="UserActivityDetailsFragment" />
+        android:label="UserActivityDetailsFragment"/>
 </navigation>
