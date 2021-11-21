@@ -51,7 +51,7 @@
         android:fontFamily="sans-serif"
         android:text="@string/ws_textView_text_tracker"
         android:textAlignment="center"
-        android:textColor="#1f1f1f"
+        android:textColor="@color/black"
         android:textSize="32sp"
         android:textStyle="bold"
 
@@ -71,7 +71,7 @@
         android:fontFamily="sans-serif"
         android:text="@string/ws_textView_text_students"
         android:textAlignment="center"
-        android:textColor="#767676"
+        android:textColor="@color/gray"
         android:textSize="16sp"
 
         app:layout_constraintTop_toBottomOf="@+id/ws_textView_tracker"
@@ -102,7 +102,7 @@
         android:fontFamily="sans-serif"
         android:text="@string/ws_materialButton_text_login"
         android:textAllCaps="false"
-        android:textColor="#4800ff"
+        android:textColor="@color/primary"
         android:textSize="16sp"
         android:textStyle="bold"
         app:rippleColor="@android:color/transparent"

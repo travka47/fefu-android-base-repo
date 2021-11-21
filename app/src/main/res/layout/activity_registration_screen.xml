@@ -2,7 +2,6 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -14,8 +13,7 @@
             android:id="@+id/reg_imageButton_arrow"
             style="@style/imageButton_arrow"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/reg_textView_registration"

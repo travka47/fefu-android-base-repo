@@ -13,6 +13,6 @@
         android:text="Дата"
         android:fontFamily="sans-serif"
         android:textSize="24sp"
-        android:textColor="#808080" />
+        android:textColor="@color/gray" />
 
 </LinearLayout>
