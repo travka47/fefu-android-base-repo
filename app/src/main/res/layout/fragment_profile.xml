@@ -9,12 +9,12 @@
 
     <TextView
         android:id="@+id/tvProfile"
-        style="@style/textView_blackHeader20"
+        style="@style/blackHeader20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="16dp"
         android:layout_marginStart="20dp"
-        android:text="@string/fr_prof_textView_text_profile"
+        android:text="@string/label_profile"
 
         app:layout_constraintBottom_toTopOf="@id/tilLogin"
         app:layout_constraintEnd_toStartOf="@id/btnSave"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:fontFamily="sans-serif"
-        android:text="@string/fr_prof_button_text_save"
+        android:text="@string/label_save"
         android:textAllCaps="false"
         android:textColor="@color/primary"
         android:textSize="16sp"
@@ -46,7 +46,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilLogin"
-        style="@style/textInputLayout_inputField"
+        style="@style/tilInputField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -56,12 +56,12 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/reg_textInputLayout_hint_login" />
+            android:hint="@string/hint_login" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilNickname"
-        style="@style/textInputLayout_inputField"
+        style="@style/tilInputField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -70,7 +70,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/fr_prof_textInputLayout_hint_name" />
+            android:hint="@string/hint_nickname" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -81,7 +81,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginStart="10dp"
         android:fontFamily="sans-serif"
-        android:text="@string/fr_prof_button_text_change"
+        android:text="@string/label_change"
         android:textAllCaps="false"
         android:textColor="@color/primary"
         android:textSize="16sp"
@@ -94,8 +94,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnExit"
-        style="@style/materialButton_squareButton"
-        android:text="@string/fr_prof_button_text_exit"
+        style="@style/squareButton"
+        android:text="@string/label_exit"
         android:backgroundTint="@color/red"
 
         app:layout_constraintStart_toStartOf="parent"

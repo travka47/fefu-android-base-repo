@@ -11,14 +11,14 @@
 
         <ImageButton
             android:id="@+id/btnArrow"
-            style="@style/imageButton_arrow"
+            style="@style/arrowButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvRegistration"
-            style="@style/textView_header"
-            android:text="@string/reg_textView_text_registration"
+            style="@style/blackHeader34"
+            android:text="@string/label_registration"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,20 +26,20 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilLogin"
-            style="@style/textInputLayout_inputField"
+            style="@style/tilInputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
 
             app:layout_constraintTop_toBottomOf="@id/tvRegistration">
             <com.google.android.material.textfield.TextInputEditText
-                android:hint="@string/reg_textInputLayout_hint_login"
+                android:hint="@string/hint_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilPassword"
-            style="@style/textInputLayout_inputField"
+            style="@style/tilInputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             app:passwordToggleEnabled="true"
@@ -49,12 +49,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="@string/reg_textInputLayout_hint_password" />
+                android:hint="@string/hint_password" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilPassword2"
-            style="@style/textInputLayout_inputField"
+            style="@style/tilInputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             app:passwordToggleEnabled="true"
@@ -64,12 +64,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="@string/reg_textInputLayout_hint_password2"/>
+                android:hint="@string/hint_password2"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilName"
-            style="@style/textInputLayout_inputField"
+            style="@style/tilInputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
 
@@ -77,7 +77,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/reg_textInputLayout_hint_name"/>
+                android:hint="@string/hint_nickname"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -88,7 +88,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
-            android:hint="@string/reg_textInputLayout_hint_sex"
+            android:hint="@string/hint_gender"
 
             app:layout_constraintTop_toBottomOf="@id/tilName">
             <AutoCompleteTextView
@@ -102,13 +102,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnContinue"
-            style="@style/materialButton_blueButton"
+            style="@style/primaryButton"
             android:layout_marginTop="30dp"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tilGender"
-            android:text="@string/reg_materialButton_continue"/>
+            android:text="@string/label_continue"/>
 
         <TextView
             android:id="@+id/tvPolicy"

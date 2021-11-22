@@ -9,7 +9,7 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabTextAppearance="@style/AllCaps"
+        app:tabTextAppearance="@style/allCaps"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/viewPager2" />

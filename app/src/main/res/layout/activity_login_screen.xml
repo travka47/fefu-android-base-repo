@@ -11,15 +11,15 @@
 
         <ImageButton
             android:id="@+id/btnArrow"
-            style="@style/imageButton_arrow"
+            style="@style/arrowButton"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/tvLogin"
-            style="@style/textView_header"
-            android:text="@string/log_textView_text_login"
+            style="@style/blackHeader34"
+            android:text="@string/label_enter"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilLogin"
-            style="@style/textInputLayout_inputField"
+            style="@style/tilInputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
 
@@ -35,12 +35,12 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/reg_textInputLayout_hint_login"/>
+                android:hint="@string/hint_login"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilPassword"
-            style="@style/textInputLayout_inputField"
+            style="@style/tilInputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             app:passwordToggleEnabled="true"
@@ -50,14 +50,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="@string/reg_textInputLayout_hint_password"/>
+                android:hint="@string/hint_password"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnContinue"
-            style="@style/materialButton_blueButton"
+            style="@style/primaryButton"
             android:layout_marginTop="30dp"
-            android:text="@string/reg_materialButton_continue"
+            android:text="@string/label_continue"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

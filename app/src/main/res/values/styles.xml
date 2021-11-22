@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="materialButton_blueButton" parent="Widget.MaterialComponents.Button">
+    <style name="primaryButton" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">40dp</item>
@@ -17,7 +17,7 @@
         <item name="rippleColor">@android:color/transparent</item>
     </style>
 
-    <style name="materialButton_squareButton" parent="Widget.MaterialComponents.Button">
+    <style name="squareButton" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">20dp</item>
@@ -33,7 +33,7 @@
         <item name="rippleColor">@android:color/transparent</item>
     </style>
 
-    <style name="imageButton_arrow">
+    <style name="arrowButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">12dp</item>
@@ -43,7 +43,7 @@
         <item name="android:background">@color/white</item>
     </style>
 
-    <style name="textView_header">
+    <style name="blackHeader34">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginTop">17dp</item>
@@ -54,17 +54,17 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="textInputLayout_inputField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="tilInputField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:layout_marginStart">20dp</item>
         <item name="android:layout_marginEnd">20dp</item>
     </style>
 
-    <style name="AllCaps" parent="TextAppearance.Design.Tab">
+    <style name="allCaps" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">false</item>
     </style>
 
-    <style name="textView_blackHeader24">
+    <style name="blackHeader24">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/black</item>
@@ -72,7 +72,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="textView_blackHeader20">
+    <style name="blackHeader20">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/black</item>
@@ -80,21 +80,21 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="textView_blackText">
+    <style name="blackText16">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="textView_greyText">
+    <style name="greyText16">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/gray</item>
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="textView_purpleText">
+    <style name="purple700Text16">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/purple_700</item>

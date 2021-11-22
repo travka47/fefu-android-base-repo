@@ -31,18 +31,18 @@
 
             <TextView
                 android:id="@+id/tvMyDistance"
-                style="@style/textView_blackHeader24"
+                style="@style/blackHeader24"
                 android:layout_marginTop="24dp"
                 android:text="14.32 км" />
 
             <TextView
                 android:id="@+id/tvMyEnd"
-                style="@style/textView_greyText"
+                style="@style/greyText16"
                 android:text="14 часов назад" />
 
             <TextView
                 android:id="@+id/tvMyTime"
-                style="@style/textView_blackHeader24"
+                style="@style/blackHeader24"
                 android:layout_marginTop="24dp"
                 android:text="1 ч 42 мин" />
 
@@ -54,12 +54,12 @@
 
                 <TextView
                     android:id="@+id/tvMyStartLabel"
-                    style="@style/textView_blackText"
-                    android:text="@string/details_text_start_label" />
+                    style="@style/blackText16"
+                    android:text="@string/label_startLabel" />
 
                 <TextView
                     android:id="@+id/tvMyStartTime"
-                    style="@style/textView_greyText"
+                    style="@style/greyText16"
                     android:layout_marginStart="8dp"
                     android:text="14:49" />
 
@@ -72,12 +72,12 @@
 
                 <TextView
                     android:id="@+id/tvMyEndLabel"
-                    style="@style/textView_blackText"
-                    android:text="@string/details_text_end_label" />
+                    style="@style/blackText16"
+                    android:text="@string/label_endLabel" />
 
                 <TextView
                     android:id="@+id/tvMyEndTime"
-                    style="@style/textView_greyText"
+                    style="@style/greyText16"
                     android:layout_marginStart="8dp"
                     android:text="16:31" />
             </LinearLayout>
@@ -95,7 +95,7 @@
                     android:id="@+id/tieMyComment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/details_hint_comment"
+                    android:hint="@string/hint_comment"
                     android:imeOptions="actionDone"
                     android:inputType="textMultiLine" />
             </com.google.android.material.textfield.TextInputLayout>

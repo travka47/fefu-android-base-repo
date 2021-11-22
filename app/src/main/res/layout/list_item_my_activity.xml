@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/tvListItemMyDistance"
-            style="@style/textView_blackHeader24"
+            style="@style/blackHeader24"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="Расстояние"
@@ -41,7 +41,7 @@
 
         <TextView
             android:id="@+id/tvListItemMyTime"
-            style="@style/textView_blackText"
+            style="@style/blackText16"
             android:layout_marginTop="4dp"
             android:text="Время"
 
@@ -50,7 +50,7 @@
 
         <TextView
             android:id="@+id/tvListItemMyActivity"
-            style="@style/textView_blackText"
+            style="@style/blackText16"
             android:layout_marginTop="16dp"
             android:text="Активность"
 
@@ -61,7 +61,7 @@
 
         <TextView
             android:id="@+id/tvListItemMyDate"
-            style="@style/textView_greyText"
+            style="@style/greyText16"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="Дата"

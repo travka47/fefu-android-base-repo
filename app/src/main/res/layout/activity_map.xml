@@ -6,7 +6,7 @@
 
     <ImageButton
         android:id="@+id/btnArrow"
-        style="@style/imageButton_arrow"
+        style="@style/arrowButton"
         app:tint="@color/primary"
 
         app:layout_constraintStart_toStartOf="parent"

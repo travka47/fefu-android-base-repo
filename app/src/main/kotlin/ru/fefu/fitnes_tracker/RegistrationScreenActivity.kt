@@ -32,7 +32,7 @@ class RegistrationScreenActivity: AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        val genders = resources.getStringArray(R.array.sex)
+        val genders = resources.getStringArray(R.array.genders)
         val arrayAdapter = ArrayAdapter(this, R.layout.dropdown_item, genders)
         binding.autocompleteGender.setAdapter(arrayAdapter)
     }
