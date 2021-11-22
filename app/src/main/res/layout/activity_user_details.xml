@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/user_details_toolbar"
+        android:id="@+id/tbUserDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="0dp"
@@ -30,24 +30,24 @@
             android:paddingHorizontal="32dp">
 
             <TextView
-                android:id="@+id/user_details_username"
+                android:id="@+id/tvUsername"
                 style="@style/textView_purpleText"
                 android:layout_marginTop="24dp"
                 android:text="\@van_darkholme" />
 
             <TextView
-                android:id="@+id/user_details_distance"
+                android:id="@+id/tvUserDistance"
                 style="@style/textView_blackHeader24"
                 android:layout_marginTop="24dp"
                 android:text="14.32 км" />
 
             <TextView
-                android:id="@+id/user_details_end"
+                android:id="@+id/tvUserEnd"
                 style="@style/textView_greyText"
                 android:text="14 часов назад" />
 
             <TextView
-                android:id="@+id/user_details_time"
+                android:id="@+id/tvUserTime"
                 style="@style/textView_blackHeader24"
                 android:layout_marginTop="24dp"
                 android:text="1 ч 42 мин" />
@@ -59,12 +59,12 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/user_details_start_label"
+                    android:id="@+id/tvUserStartLabel"
                     style="@style/textView_blackText"
                     android:text="@string/details_text_start_label" />
 
                 <TextView
-                    android:id="@+id/user_details_start_time"
+                    android:id="@+id/tvUserStartTime"
                     style="@style/textView_greyText"
                     android:layout_marginStart="8dp"
                     android:text="14:49" />
@@ -77,19 +77,19 @@
                     android:background="@color/gray" />
 
                 <TextView
-                    android:id="@+id/user_details_end_label"
+                    android:id="@+id/tvUserEndLabel"
                     style="@style/textView_blackText"
                     android:text="@string/details_text_end_label" />
 
                 <TextView
-                    android:id="@+id/user_details_end_time"
+                    android:id="@+id/tvUserEndTime"
                     style="@style/textView_greyText"
                     android:layout_marginStart="8dp"
                     android:text="16:31" />
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/user_details_textInputLayout"
+                android:id="@+id/tilUserComment"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
                 app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/user_details_textInputEditText"
+                    android:id="@+id/tieUserComment"
                     style="@style/textView_greyText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

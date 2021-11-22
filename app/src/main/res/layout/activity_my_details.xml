@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_details_toolbar"
+        android:id="@+id/tbMyDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="0dp"
@@ -30,18 +30,18 @@
             android:paddingHorizontal="32dp">
 
             <TextView
-                android:id="@+id/my_details_distance"
+                android:id="@+id/tvMyDistance"
                 style="@style/textView_blackHeader24"
                 android:layout_marginTop="24dp"
                 android:text="14.32 км" />
 
             <TextView
-                android:id="@+id/my_details_end"
+                android:id="@+id/tvMyEnd"
                 style="@style/textView_greyText"
                 android:text="14 часов назад" />
 
             <TextView
-                android:id="@+id/my_details_time"
+                android:id="@+id/tvMyTime"
                 style="@style/textView_blackHeader24"
                 android:layout_marginTop="24dp"
                 android:text="1 ч 42 мин" />
@@ -53,12 +53,12 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/my_details_start_label"
+                    android:id="@+id/tvMyStartLabel"
                     style="@style/textView_blackText"
                     android:text="@string/details_text_start_label" />
 
                 <TextView
-                    android:id="@+id/my_details_start_time"
+                    android:id="@+id/tvMyStartTime"
                     style="@style/textView_greyText"
                     android:layout_marginStart="8dp"
                     android:text="14:49" />
@@ -71,19 +71,19 @@
                     android:background="@color/gray" />
 
                 <TextView
-                    android:id="@+id/my_details_end_label"
+                    android:id="@+id/tvMyEndLabel"
                     style="@style/textView_blackText"
                     android:text="@string/details_text_end_label" />
 
                 <TextView
-                    android:id="@+id/my_details_end_time"
+                    android:id="@+id/tvMyEndTime"
                     style="@style/textView_greyText"
                     android:layout_marginStart="8dp"
                     android:text="16:31" />
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/my_details_textInputLayout"
+                android:id="@+id/tilMyComment"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
                 app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/my_details_textInputEditText"
+                    android:id="@+id/tieMyComment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/details_hint_comment"

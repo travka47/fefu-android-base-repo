@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import ru.fefu.activitytracker.R
 import ru.fefu.fitnes_tracker.map.ui.MapItem
@@ -14,6 +13,7 @@ import ru.fefu.fitnes_tracker.map.ui.MapItemAdapter
 
 class StartTrackingFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
+
     private val dataList = listOf(
         MapItem("Велосипед"),
         MapItem("Бег"),
@@ -30,18 +30,18 @@ class StartTrackingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView = view.findViewById(R.id.new_activity_recycler_view)
+        recyclerView = view.findViewById(R.id.rvMapItems)
         val adapter = MapItemAdapter(dataList)
         recyclerView.adapter = adapter
 
-        val btn: Button = view.findViewById(R.id.new_activity_btn_create)
+        val btn: Button = view.findViewById(R.id.btnStart)
         btn.setOnClickListener {
             parentFragmentManager
                 .beginTransaction().apply {
                     replace(
-                        R.id.new_activity_flow,
+                        R.id.containerTracking,
                         ProcessTrackingFragment.newInstance(),
-                        "createActivity"
+                        "processTracking"
                     )
                     addToBackStack(null)
                     commit()

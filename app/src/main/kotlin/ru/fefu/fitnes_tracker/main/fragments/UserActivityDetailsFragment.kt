@@ -17,7 +17,7 @@ class UserActivityDetailsFragment:
         savedInstanceState: Bundle?
     ): View? {
         return super.onCreateView(inflater, container, savedInstanceState).also {
-            binding.userDetailsToolbar.setNavigationOnClickListener {
+            binding.tbUserDetails.setNavigationOnClickListener {
                 findNavController().popBackStack()
             }
         }

@@ -10,28 +10,28 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/log_imageButton_arrow"
+            android:id="@+id/btnArrow"
             style="@style/imageButton_arrow"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
-            android:id="@+id/log_textView_login"
+            android:id="@+id/tvLogin"
             style="@style/textView_header"
             android:text="@string/log_textView_text_login"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/log_imageButton_arrow"/>
+            app:layout_constraintTop_toBottomOf="@id/btnArrow"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/log_textInputLayout_login"
+            android:id="@+id/tilLogin"
             style="@style/textInputLayout_inputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
 
-            app:layout_constraintTop_toBottomOf="@id/log_textView_login">
+            app:layout_constraintTop_toBottomOf="@id/tvLogin">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,13 +39,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/log_textInputLayout_password"
+            android:id="@+id/tilPassword"
             style="@style/textInputLayout_inputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             app:passwordToggleEnabled="true"
 
-            app:layout_constraintTop_toBottomOf="@id/log_textInputLayout_login">
+            app:layout_constraintTop_toBottomOf="@id/tilLogin">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,17 +54,17 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/log_button_continue"
+            android:id="@+id/btnContinue"
             style="@style/materialButton_blueButton"
             android:layout_marginTop="30dp"
             android:text="@string/reg_materialButton_continue"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/log_textInputLayout_password" />
+            app:layout_constraintTop_toBottomOf="@id/tilPassword" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/ivBicycles"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="30dp"
@@ -72,7 +72,7 @@
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/log_button_continue" />
+            app:layout_constraintTop_toBottomOf="@id/btnContinue" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

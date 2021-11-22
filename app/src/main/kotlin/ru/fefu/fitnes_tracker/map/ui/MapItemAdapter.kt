@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.fefu.activitytracker.R
 
 class MapItemAdapter (
-    private val data: List<MapItem>
+    private val mapItems: List<MapItem>
 ) : RecyclerView.Adapter<MapItemAdapter.MapItemViewHolder>() {
 
         private var items = mutableListOf<View>()
@@ -24,13 +24,13 @@ class MapItemAdapter (
         }
 
         override fun onBindViewHolder(holder: MapItemAdapter.MapItemViewHolder, position: Int) {
-            holder.bind(data[position])
+            holder.bind(mapItems[position])
         }
 
-        override fun getItemCount(): Int = data.size
+        override fun getItemCount(): Int = mapItems.size
 
         inner class MapItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            private val ivType: TextView = itemView.findViewById(R.id.new_activity_type)
+            private val tvMapItemName: TextView = itemView.findViewById(R.id.tvMapItemName1)
 
             init {
                 itemView.setOnClickListener {
@@ -41,7 +41,7 @@ class MapItemAdapter (
             }
 
             fun bind(item: MapItem) {
-                ivType.text = item.name
+                tvMapItemName.text = item.name
             }
         }
 }

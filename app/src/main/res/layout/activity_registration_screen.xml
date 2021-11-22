@@ -10,27 +10,27 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/reg_imageButton_arrow"
+            android:id="@+id/btnArrow"
             style="@style/imageButton_arrow"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/reg_textView_registration"
+            android:id="@+id/tvRegistration"
             style="@style/textView_header"
             android:text="@string/reg_textView_text_registration"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/reg_imageButton_arrow" />
+            app:layout_constraintTop_toBottomOf="@id/btnArrow" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/reg_textInputLayout_login"
+            android:id="@+id/tilLogin"
             style="@style/textInputLayout_inputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
 
-            app:layout_constraintTop_toBottomOf="@id/reg_textView_registration">
+            app:layout_constraintTop_toBottomOf="@id/tvRegistration">
             <com.google.android.material.textfield.TextInputEditText
                 android:hint="@string/reg_textInputLayout_hint_login"
                 android:layout_width="match_parent"
@@ -38,13 +38,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/reg_textInputLayout_password"
+            android:id="@+id/tilPassword"
             style="@style/textInputLayout_inputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             app:passwordToggleEnabled="true"
 
-            app:layout_constraintTop_toBottomOf="@id/reg_textInputLayout_login">
+            app:layout_constraintTop_toBottomOf="@id/tilLogin">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,13 +53,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/reg_textInputLayout_password2"
+            android:id="@+id/tilPassword2"
             style="@style/textInputLayout_inputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             app:passwordToggleEnabled="true"
 
-            app:layout_constraintTop_toBottomOf="@id/reg_textInputLayout_password">
+            app:layout_constraintTop_toBottomOf="@id/tilPassword">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,12 +68,12 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/reg_textInputLayout_name"
+            android:id="@+id/tilName"
             style="@style/textInputLayout_inputField"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
 
-            app:layout_constraintTop_toBottomOf="@id/reg_textInputLayout_password2">
+            app:layout_constraintTop_toBottomOf="@id/tilPassword2">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/reg_textInputLayout_sex"
+            android:id="@+id/tilGender"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
@@ -90,9 +90,9 @@
             android:layout_marginTop="20dp"
             android:hint="@string/reg_textInputLayout_hint_sex"
 
-            app:layout_constraintTop_toBottomOf="@id/reg_textInputLayout_name">
+            app:layout_constraintTop_toBottomOf="@id/tilName">
             <AutoCompleteTextView
-                android:id="@+id/reg_autoCompleteTextView_sex"
+                android:id="@+id/autocompleteGender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="16dp"
@@ -101,17 +101,17 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/reg_button_continue"
+            android:id="@+id/btnContinue"
             style="@style/materialButton_blueButton"
             android:layout_marginTop="30dp"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/reg_textInputLayout_sex"
+            app:layout_constraintTop_toBottomOf="@id/tilGender"
             android:text="@string/reg_materialButton_continue"/>
 
         <TextView
-            android:id="@+id/reg_textView_policy"
+            android:id="@+id/tvPolicy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
@@ -122,19 +122,19 @@
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/reg_button_continue"/>
+            app:layout_constraintTop_toBottomOf="@id/btnContinue"/>
 
         <ImageView
-            android:id="@+id/reg_imageView_icon"
+            android:id="@+id/ivLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:paddingBottom="30dp"
-            app:srcCompat="@drawable/ic_group_12"
+            app:srcCompat="@drawable/ic_logo_black"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/reg_textView_policy"/>
+            app:layout_constraintTop_toBottomOf="@id/tvPolicy"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

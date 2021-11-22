@@ -9,7 +9,6 @@ import android.widget.ImageButton
 import ru.fefu.activitytracker.R
 
 class ProcessTrackingFragment : Fragment() {
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -20,7 +19,7 @@ class ProcessTrackingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val finishButton: ImageButton = view.findViewById(R.id.fr_act_floatingActionButton2)
+        val finishButton: ImageButton = view.findViewById(R.id.btnFinish)
         finishButton.setOnClickListener {
             parentFragmentManager.popBackStack()
         }

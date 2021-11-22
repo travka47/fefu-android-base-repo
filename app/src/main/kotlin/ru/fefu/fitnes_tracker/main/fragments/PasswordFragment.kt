@@ -17,7 +17,7 @@ class PasswordFragment:
         savedInstanceState: Bundle?
     ): View? {
         return super.onCreateView(inflater, container, savedInstanceState).also {
-            binding.frPasToolbar.setNavigationOnClickListener {
+            binding.tbPassword.setNavigationOnClickListener {
                 findNavController().popBackStack()
             }
         }

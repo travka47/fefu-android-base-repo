@@ -14,12 +14,12 @@ class ProfileFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.frProfButtonChange.setOnClickListener() {
+        binding.btnChange.setOnClickListener() {
             val action = ProfileFragmentDirections.actionProfileFragmentToPasswordFragment()
             findNavController().navigate(action)
         }
 
-        binding.frProfButtonExit.setOnClickListener() {
+        binding.btnExit.setOnClickListener() {
             val intent = Intent(context, WelcomeScreenActivity::class.java)
             startActivity(intent)
         }

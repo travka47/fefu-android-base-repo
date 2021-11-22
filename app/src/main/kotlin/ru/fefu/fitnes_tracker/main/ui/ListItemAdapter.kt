@@ -9,10 +9,10 @@ import ru.fefu.activitytracker.databinding.ListItemMyActivityBinding
 import ru.fefu.activitytracker.databinding.ListItemUserActivityBinding
 
 class ListItemAdapter (
-    items: List<ListItem>
+    listItems: List<ListItem>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val items = items.toMutableList()
+    private val items = listItems.toMutableList()
 
     private var itemClickListener: (Int) -> Unit = {}
 
@@ -87,38 +87,38 @@ class ListItemAdapter (
 
         inner class DateViewHolder(private val binding: ListItemDateBinding) : RecyclerView.ViewHolder(binding.root) {
             fun bind(date: ListItem.Date) {
-                binding.dateItemTextView.text = date.date
+                binding.tvListItemDate.text = date.date
             }
         }
 
     inner class MyActivityViewHolder(private val binding: ListItemMyActivityBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
-            binding.myActivityItemCardView.setOnClickListener {
+            binding.cvListItemMy.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) itemClickListener.invoke(position)
             }
         }
         fun bind(activity: ListItem.MyActivity) {
-            binding.myActivityItemTextViewActivity.text = activity.activity
-            binding.myActivityItemTextViewDistance.text = activity.distance
-            binding.myActivityItemTextViewTime.text = activity.time
-            binding.myActivityItemTextViewDate.text = activity.date
+            binding.tvListItemMyActivity.text = activity.activity
+            binding.tvListItemMyDistance.text = activity.distance
+            binding.tvListItemMyTime.text = activity.time
+            binding.tvListItemMyDate.text = activity.date
         }
     }
 
     inner class UserActivityViewHolder(private val binding: ListItemUserActivityBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
-            binding.userActivityItemCardView.setOnClickListener {
+            binding.cvListItemUser.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) itemClickListener.invoke(position)
             }
         }
         fun bind(activity: ListItem.UserActivity) {
-            binding.userActivityItemTextViewActivity.text = activity.activity
-            binding.userActivityItemTextViewDistance.text = activity.distance
-            binding.userActivityItemTextViewTime.text = activity.time
-            binding.userActivityItemTextViewDate.text = activity.date
-            binding.userActivityItemTextViewUser.text = activity.user
+            binding.tvListItemUserActivity.text = activity.activity
+            binding.tvListItemUserDistance.text = activity.distance
+            binding.tvListItemUserTime.text = activity.time
+            binding.tvListItemUserDate.text = activity.date
+            binding.tvListItemUserUsername.text = activity.username
         }
     }
 
