@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.fefu.activitytracker.R
-import ru.fefu.activitytracker.databinding.ItemDateBinding
-import ru.fefu.activitytracker.databinding.ItemMyActivityBinding
-import ru.fefu.activitytracker.databinding.ItemUserActivityBinding
+import ru.fefu.activitytracker.databinding.ListItemDateBinding
+import ru.fefu.activitytracker.databinding.ListItemMyActivityBinding
+import ru.fefu.activitytracker.databinding.ListItemUserActivityBinding
 
 class ListItemAdapter (
     items: List<ListItem>
@@ -42,22 +42,22 @@ class ListItemAdapter (
         viewType: Int
     ): RecyclerView.ViewHolder {
         return when(viewType) {
-            R.layout.item_date -> DateViewHolder(
-                    ItemDateBinding.inflate(
+            R.layout.list_item_date -> DateViewHolder(
+                ListItemDateBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
                 )
             )
-            R.layout.item_my_activity -> MyActivityViewHolder(
-                ItemMyActivityBinding.inflate(
+            R.layout.list_item_my_activity -> MyActivityViewHolder(
+                ListItemMyActivityBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
                 )
             )
-            R.layout.item_user_activity -> UserActivityViewHolder(
-                ItemUserActivityBinding.inflate(
+            R.layout.list_item_user_activity -> UserActivityViewHolder(
+                ListItemUserActivityBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
@@ -79,19 +79,19 @@ class ListItemAdapter (
 
     override fun getItemViewType(position: Int): Int {
         return when(items[position]) {
-            is ListItem.Date -> R.layout.item_date
-            is ListItem.MyActivity -> R.layout.item_my_activity
-            is ListItem.UserActivity -> R.layout.item_user_activity
+            is ListItem.Date -> R.layout.list_item_date
+            is ListItem.MyActivity -> R.layout.list_item_my_activity
+            is ListItem.UserActivity -> R.layout.list_item_user_activity
         }
     }
 
-        inner class DateViewHolder(private val binding: ItemDateBinding) : RecyclerView.ViewHolder(binding.root) {
+        inner class DateViewHolder(private val binding: ListItemDateBinding) : RecyclerView.ViewHolder(binding.root) {
             fun bind(date: ListItem.Date) {
                 binding.dateItemTextView.text = date.date
             }
         }
 
-    inner class MyActivityViewHolder(private val binding: ItemMyActivityBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class MyActivityViewHolder(private val binding: ListItemMyActivityBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.myActivityItemCardView.setOnClickListener {
                 val position = adapterPosition
@@ -106,7 +106,7 @@ class ListItemAdapter (
         }
     }
 
-    inner class UserActivityViewHolder(private val binding: ItemUserActivityBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class UserActivityViewHolder(private val binding: ListItemUserActivityBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.userActivityItemCardView.setOnClickListener {
                 val position = adapterPosition

@@ -39,7 +39,7 @@
         <item name="android:padding">12dp</item>
         <item name="android:layout_marginTop">35dp</item>
         <item name="android:layout_marginStart">6dp</item>
-        <item name="srcCompat">@drawable/ic_arrow</item>
+        <item name="srcCompat">@drawable/ic_arrow_black</item>
         <item name="android:background">@color/white</item>
     </style>
 

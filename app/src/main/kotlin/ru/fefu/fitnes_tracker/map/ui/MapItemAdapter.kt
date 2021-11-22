@@ -18,7 +18,7 @@ class MapItemAdapter (
             viewType: Int
         ): MapItemAdapter.MapItemViewHolder {
             val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_map_activity, parent, false)
+                .inflate(R.layout.map_item_activity, parent, false)
             items.add(view)
             return MapItemViewHolder(view)
         }

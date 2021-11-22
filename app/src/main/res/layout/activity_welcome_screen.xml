@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/ic_welcome_screen_activity"
+        app:srcCompat="@drawable/ic_activity"
 
         app:layout_constraintTop_toBottomOf="@+id/ws_imageView_icon"
         app:layout_constraintBottom_toTopOf="@+id/ws_textView_tracker"
