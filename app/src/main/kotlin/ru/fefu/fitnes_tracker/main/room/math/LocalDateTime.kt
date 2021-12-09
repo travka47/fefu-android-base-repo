@@ -1,14 +1,11 @@
 package ru.fefu.fitnes_tracker.main.room.math
 
-import android.os.Build
 import android.text.format.DateUtils
-import androidx.annotation.RequiresApi
 import java.time.Duration
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
-@RequiresApi(Build.VERSION_CODES.O)
 fun LocalDateTime.toDateSeparator(): String {
     val dateTimeInMilliseconds = toInstant(ZoneOffset.UTC).toEpochMilli()
 
@@ -34,7 +31,6 @@ fun LocalDateTime.toDateSeparator(): String {
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
 fun LocalDateTime.toFinishDateOrTime(): String {
     val curDateTime = LocalDateTime.now()
     val duration = Duration.between(this, curDateTime)
@@ -45,13 +41,10 @@ fun LocalDateTime.toFinishDateOrTime(): String {
     }
 }
 
-
-@RequiresApi(Build.VERSION_CODES.O)
 fun LocalDateTime.toTime(): String {
     return this.format(DateTimeFormatter.ofPattern("hh:mm"))
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
 fun Duration.toFormattedDurationBetween(): String {
     return "${toHours()} ч. ${toMinutes() % 60} м."
 }

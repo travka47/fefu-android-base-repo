@@ -1,7 +1,5 @@
 package ru.fefu.fitnes_tracker.main.room.db
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -19,7 +17,6 @@ data class MyActivityRoom(
     @ColumnInfo(name = "finish") val finish: LocalDateTime,
     @ColumnInfo(name = "coords") val coords: List<Pair<Double, Double>>
 ) {
-    @RequiresApi(Build.VERSION_CODES.O)
     fun toMyActivity(): ListItem.MyActivity {
         return ListItem.MyActivity(
             id,

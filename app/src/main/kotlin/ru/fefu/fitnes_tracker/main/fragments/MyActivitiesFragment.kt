@@ -1,9 +1,7 @@
 package ru.fefu.fitnes_tracker.main.fragments
 
-import android.os.Build
 import android.os.Bundle
 import android.view.View
-import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import ru.fefu.activitytracker.R
@@ -18,7 +16,6 @@ class MyActivitiesFragment :
 
     private val myActivitiesAdapter = ListItemAdapter()
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

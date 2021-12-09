@@ -1,12 +1,7 @@
 package ru.fefu.fitnes_tracker.map.fragments
 
-import android.os.Build
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
-import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import ru.fefu.activitytracker.R
 import ru.fefu.activitytracker.databinding.FragmentStartTrackingBinding
@@ -29,7 +24,6 @@ class StartTrackingFragment : BaseFragment<FragmentStartTrackingBinding>(R.layou
 
     private var selectedActivity: MapItemType? = null
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

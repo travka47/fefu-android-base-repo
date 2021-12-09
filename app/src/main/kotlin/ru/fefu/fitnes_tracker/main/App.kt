@@ -3,7 +3,6 @@ package ru.fefu.fitnes_tracker.main
 import android.app.Application
 import androidx.room.Room
 import ru.fefu.fitnes_tracker.main.room.db.MyActivitiesDatabase
-import ru.fefu.fitnes_tracker.main.room.math.Converters
 
 class App : Application() {
 

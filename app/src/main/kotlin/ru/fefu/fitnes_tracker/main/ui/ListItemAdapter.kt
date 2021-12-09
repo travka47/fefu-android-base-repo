@@ -9,7 +9,6 @@ import ru.fefu.activitytracker.R
 import ru.fefu.activitytracker.databinding.ListItemDateBinding
 import ru.fefu.activitytracker.databinding.ListItemMyActivityBinding
 import ru.fefu.activitytracker.databinding.ListItemUserActivityBinding
-import kotlin.reflect.typeOf
 
 class ListItemAdapter
     : ListAdapter<ListItem, RecyclerView.ViewHolder>(ListItemCallback()) {

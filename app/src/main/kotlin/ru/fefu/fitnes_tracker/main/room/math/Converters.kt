@@ -1,7 +1,5 @@
 package ru.fefu.fitnes_tracker.main.room.math
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.room.TypeConverter
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
@@ -10,13 +8,11 @@ import java.time.ZoneOffset
 
 class Converters {
 
-    @RequiresApi(Build.VERSION_CODES.O)
     @TypeConverter
     fun fromLocalDateTime(value: LocalDateTime?): Long? {
         return value?.toEpochSecond(ZoneOffset.UTC)
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     @TypeConverter
     fun toLocalDateTime(value: Long?): LocalDateTime? {
         return value?.let { LocalDateTime.ofEpochSecond(it, 0, ZoneOffset.UTC) }
